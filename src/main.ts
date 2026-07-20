@@ -48,6 +48,13 @@ const changeEnvironmentMap = (environmentMapKey: string = 'interiorView') => {
 
   // HDRI Loader
   const texturePath = getTexturePath(environmentMapKey);
+  if(donut) {
+    if(environmentMapKey === 'interiorView') {
+      donut.material.visible = true;
+    } else {
+      donut.material.visible = false;
+    }
+  }
 
   const isNormalTexture: boolean = !texturePath.includes('.hdr');
   const hdrLoader: THREE.TextureLoader | HDRLoader = getTextureLoaderObject(isNormalTexture);
@@ -59,7 +66,6 @@ const changeEnvironmentMap = (environmentMapKey: string = 'interiorView') => {
   });
 }
 
-changeEnvironmentMap();
 
 /**
  * Implementing 3d Model and Geometries
@@ -93,8 +99,11 @@ const donut = new THREE.Mesh(donutGeometry,donutMaterial);
 /**
  * Enabling layer to 1 will tell CubeCamera to look over only this mesh.
  */
-donut.layers.enable(1)
+donut.layers.enable(1);
 scene.add(donut);
+
+changeEnvironmentMap();
+
 
 /**
  * Camera

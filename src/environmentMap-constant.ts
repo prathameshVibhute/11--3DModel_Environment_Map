@@ -3,7 +3,7 @@ export const environmentMaps: any[] = [
     "japaneseStreet": 'public/environmentMaps/blockadesLabsSkybox/anime_art_style_japan_streets_with_cherry_blossom_.jpg'
   },
   {
-    "neonCity": "public/environmentMaps/blockadesLabsSkybox/anime_art_style_japan_streets_with_cherry_blossom_.jpg"
+    "neonCity": "public/environmentMaps/blockadesLabsSkybox/digital_painting_neon_city_night_orange_lights_.jpg"
   },
   {
     "fantasyLand": "public/environmentMaps/blockadesLabsSkybox/fantasy_lands_castles_at_night.jpg"
